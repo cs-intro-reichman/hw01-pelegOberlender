@@ -4,6 +4,21 @@
  */
 public class GenThree {
 	public static void main(String[] args) {
-		// Put your code here	
+		int minIndex = Integer.parseInt(args[0]);
+		int maxIndex = Integer.parseInt(args[1]);
+
+		int randomNum1 = (int)(Math.random()*(maxIndex - minIndex) + minIndex);
+		int randomNum2 = (int)(Math.random()*(maxIndex - minIndex) + minIndex);
+		int randomNum3 = (int)(Math.random()*(maxIndex - minIndex) + minIndex);
+
+		System.out.println(randomNum1);
+		System.out.println(randomNum2);
+		System.out.println(randomNum3);
+
+		int tenpMid = Math.min(randomNum1,randomNum2);
+		int newMin = Math.min(min,randomNum3);
+
+		System.out.println("The minimal generated number was " + newMin);
+
 	}
 }

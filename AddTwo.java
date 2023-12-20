@@ -3,6 +3,10 @@
  */
 public class AddTwo {
 	public static void main(String[] args) {
-		// Put your code here	
+		int numOne = Integer.parseInt(args[0]);
+		int numTwo = Integer.parseInt(args[1]);
+		System.out.println(numOne + " + " + numTwo + " = " + (numOne + numTwo));  
+
 	}
+	
 }
