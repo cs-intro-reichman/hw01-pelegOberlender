@@ -4,21 +4,24 @@
  */
 public class GenThree {
 	public static void main(String[] args) {
-		int minIndex = Integer.parseInt(args[0]);
-		int maxIndex = Integer.parseInt(args[1]);
+		int indexOne = Integer.parseInt(args[0]);
+		int indexTwo = Integer.parseInt(args[1]);
 
-		int randomNum1 = (int)(Math.random()*(maxIndex - minIndex) + minIndex);
-		int randomNum2 = (int)(Math.random()*(maxIndex - minIndex) + minIndex);
-		int randomNum3 = (int)(Math.random()*(maxIndex - minIndex) + minIndex);
+		int min = Math.min(indexOne,indexTwo);
+		int max = Math.max(indexOne,indexTwo);
+
+		int randomNum1 = (int)(Math.random()*(max - min) + min);
+		int randomNum2 = (int)(Math.random()*(max - min) + min);
+		int randomNum3 = (int)(Math.random()*(max - min) + min);
 
 		System.out.println(randomNum1);
 		System.out.println(randomNum2);
 		System.out.println(randomNum3);
 
-		int tempMin = Math.min(randomNum1,randomNum2);
-		int newMin = Math.min(tempMin,randomNum3);
+		int tempRandomMin = Math.min(randomNum1,randomNum2);
+		int newRandomMin = Math.min(tempRandomMin,randomNum3);
 
-		System.out.println("The minimal generated number was " + newMin);
+		System.out.println("The minimal generated number was " + newRandomMin);
 
 	}
 }
